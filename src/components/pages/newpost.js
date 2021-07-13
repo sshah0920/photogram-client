@@ -9,7 +9,7 @@ const NewPost = () => {
   const [url, setUrl] = useState("");
   useEffect(() => {
     if (url) {
-      fetch("/createpost", {
+      fetch("https://pgram.herokuapp.com/createpost", {
         method: "post",
         headers: {
           "Content-Type": "application/json",

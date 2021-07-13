@@ -6,7 +6,7 @@ const Profile = () => {
   const [profilePhotos, setProfilePhotos] = useState([]);
   const {state, dispatch} = useContext(userContext)
   useEffect(() => {
-    fetch("/myposts", {
+    fetch("https://pgram.herokuapp.com/myposts", {
       headers: {
         Authorization: "Bearer: " + localStorage.getItem("jwt"),
       },
