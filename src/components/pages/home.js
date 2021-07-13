@@ -7,7 +7,7 @@ const Home = () => {
   const [data, setData] = useState([]);
   const { state, dispatch } = useContext(userContext);
   useEffect(() => {
-    fetch("https://pgram.herokuapp.com/allposts", {
+    fetch("/allposts", {
       headers: {
         Authorization: "Bearer: " + localStorage.getItem("jwt"),
       },
@@ -19,7 +19,7 @@ const Home = () => {
       });
   }, []);
   const likePost = (id) => {
-    fetch("https://pgram.herokuapp.com/like", {
+    fetch("/like", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -47,7 +47,7 @@ const Home = () => {
   };
 
   const dislikePost = (id) => {
-    fetch("https://pgram.herokuapp.com/dislike", {
+    fetch("/dislike", {
       method: "put",
       headers: {
         "Content-Type": "application/json",

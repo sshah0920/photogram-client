@@ -12,7 +12,7 @@ const Signup = () => {
       M.toast({ html: "Invalid Email", classes: "#c62828 red darken-3" });
       return;
     }*/
-    fetch("https://pgram.herokuapp.com/signup", {
+    fetch("/signup", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
