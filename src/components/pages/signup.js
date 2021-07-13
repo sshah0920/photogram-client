@@ -62,7 +62,7 @@ const Signup = () => {
           className="btn waves-effect waves-light"
           onClick={() => submitData()}
         >
-          Login
+          Signup
         </button>
         <br /> <br />
         <Link className="signUpLink" to="/login">
